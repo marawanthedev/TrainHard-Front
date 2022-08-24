@@ -1,0 +1,48 @@
+.side-button {
+  width: 12.5em;
+  height: 8rem;
+  background-color: white;
+  position: fixed;
+  z-index: 100;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+
+
+}
+
+.side-button-text {
+  font-family: "Almarai", sans-serif;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.youtube-icon {
+  width: 5rem;
+  height: 5rem;
+}
+
+@media (max-width: 500px) {
+  .side-button {
+    width: 11rem;
+  }
+
+  .youtube-icon {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .side-button-text {
+    font-size: 0.7rem;
+  }
+
+}

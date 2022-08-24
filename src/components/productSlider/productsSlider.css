@@ -1,0 +1,60 @@
+.products-slider-container {
+  background-color: white;
+  width: 85%;
+  height: 32.5rem;
+  border-radius: 10px;
+  position: relative;
+
+}
+.products-main-container {
+  background-color: #FAF9F6;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6rem 0;
+  position: relative;
+}
+.products-slider-container h1 {
+  text-align: center;
+  position: absolute;
+  top:-4rem;
+  left:0;
+  z-index: 100;
+  font-family: 'Roboto', sans-serif;
+
+}
+.products-slider-container-header {
+  font-family: "Cairo", sans-serif;
+}
+
+.products-slider-container .slick-dots {
+  position: absolute;
+  bottom: -40px !important;
+  display: block;
+  width: 100%;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+}
+.products-slider-container .slick-dots li.slick-active button:before {
+  font-size: 1.5rem;
+  color: #170205 !important;
+}
+.products-slider-container .slick-dots li button:before {
+  font-size: 1.5rem !important;
+  color: rgb(216, 210, 210) !important;
+  opacity: 1 !important;
+  border-radius: 50%;
+}
+
+.products-slider-container .slick-prev {
+  width: 4rem;
+  height: 4rem;
+  left: 4rem !important;
+}
+.products-slider-container .slick-next {
+  font-size: 4rem !important;
+  right: 4rem !important;
+}

@@ -1,0 +1,65 @@
+.slider-container {
+  width: 100% !important;
+}
+
+.review-text {
+  height: 10rem;
+  display: flex;
+}
+
+.slider-container .slick-dots {
+  position: absolute;
+  bottom: -30px !important;
+  display: block;
+  width: 100%;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.reviews-header {
+  font-size: 2.5rem !important;
+  font-family: "Mirza", cursive;
+  font-family: "Almarai", sans-serif;
+  font-family: "Cairo", sans-serif;
+  margin-top: -1rem;
+}
+
+.slick-dots li.slick-active button:before {
+  font-size: 25px;
+  color: #0297ff !important;
+}
+
+.slick-dots li button:before {
+  font-size: 25px !important;
+  color: rgb(206, 202, 202) !important;
+  opacity: 1 !important;
+  border-radius: 50%;
+}
+
+.arrow {
+  top: 16rem;
+  z-index: 100;
+}
+
+.slick-prev {
+  width: 4rem;
+  height: 4rem;
+  left: 4rem !important;
+}
+
+.slick-next {
+  font-size: 4rem !important;
+  right: 4rem !important;
+}
+
+.testimonials-slider-container .slick-next {
+  display: none !important;
+}
+
+.review-img {
+  height: 20rem;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}

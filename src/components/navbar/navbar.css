@@ -1,0 +1,115 @@
+.navbar {
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 8rem;
+  padding: 0 8rem;
+  position: fixed;
+  z-index: 222;
+  color: white;
+}
+
+.navbar-scroll-mode {
+  color: #6f6f6f;
+  background-color: white;
+}
+
+.logo {
+  width: 10rem;
+  height: 75%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  background-image: url("../../assets/img/logo_white-removebg.png");
+  background-color: white;
+  border-radius: 50%;
+}
+
+.navbar .navbar-scroll-mode .logo {
+  border-radius: 0;
+  background-color: transparent;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  align-items: center;
+  height: auto;
+  font-family: "Quicksand", sans-serif;
+  font-family: "Cairo", sans-serif;
+}
+
+.item {
+  list-style: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+.item a {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 2.5px solid transparent;
+  padding: 1rem 0.5rem;
+  transition: 0.3 all ease-in-out forwards;
+}
+
+.item a:hover {
+  border-bottom-color: white;
+}
+
+.navbar-scroll-mode .item a:hover {
+  border-bottom-color: #6f6f6f;
+}
+
+.item:not(:first-of-type) {
+  margin: 0 1.2rem;
+}
+
+.item:first-of-type {
+  margin-right: 1.2rem;
+}
+
+@media (max-width: 1100px) {
+  .navbar {
+    padding: 0 4rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .navbar {
+    padding: 0 2rem;
+  }
+}
+
+@media (max-width: 920px) {
+  .navbar {
+    padding: 0;
+  }
+
+  .item:not(:first-of-type) {
+    margin: 0 1rem;
+  }
+
+  .item:first-of-type {
+    margin-right: 1rem;
+  }
+}
+
+@media (max-width: 850px) {
+  .list {
+    display: none;
+  }
+
+  .navbar {
+    justify-content: center;
+  }
+}
