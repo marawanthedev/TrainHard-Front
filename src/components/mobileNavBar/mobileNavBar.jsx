@@ -5,24 +5,20 @@ export default function MobileNavBar() {
 
   const links = [
     {
-      text: "من نحن؟",
-      to: "#about",
+      text: "Main",
+      to: "#main",
     },
     {
-      text: "خدمات",
-      to: "#services",
+      text: "New Arrival",
+      to: "#new-arrivals",
     },
     {
-      text: "معرض الصور",
-      to: "#gallery",
+      text: "Categories",
+      to: "#categories",
     },
     {
-      text: "قالو عنا",
-      to: "#testimonials",
-    },
-    {
-      text: "تواصل معنا",
-      to: "#contact",
+      text: "Reviews",
+      to: "#reviews",
     },
   ];
 

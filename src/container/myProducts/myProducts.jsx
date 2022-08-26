@@ -17,7 +17,10 @@ export default function MyProducts() {
 
   return (
     <div style={{ width: "100%", height: "auto" }}>
-      <ProductsSlider products={products} header="Popular"></ProductsSlider>
+      <ProductsSlider
+        products={products}
+        header="New arrivals"
+      ></ProductsSlider>
     </div>
   );
 }

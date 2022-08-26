@@ -1,11 +1,11 @@
 import Template from "../../components/template/template";
 import Header from "../../container/header/header";
-import Testimonials from "../../container/testinmonials/testimonials";
 import MyProducts from "../../container/myProducts/myProducts";
 import LoadingOverlay from "../../components/loadingOverlay/loadingOverlay";
-import SideButton from "../../components/sideButton/sideButton";
+// import SideButton from "../../components/sideButton/sideButton";
 import sanityClient from "../../sanity/sanity";
 import CategoryList from "../../container/categoriesList/categoriesList";
+import Reviews from "../../container/reviews/reviews";
 
 export default function Landing() {
   const query = '*[_type == "gallery"]';
@@ -21,24 +21,26 @@ export default function Landing() {
           <div id="page">{/* <Header></Header> */}</div>
         </div>
 
+        {/* header */}
+        <Header />
+
         {/* Loading overlay
     ================================================== */}
         <LoadingOverlay />
-
-        {/* Category List ================================================== */}
-        <CategoryList />
-
-        {/* Testimonials
-    ================================================== */}
-        {/* <Testimonials /> */}
 
         {/* Products slider
     ================================================== */}
         <MyProducts />
 
+        {/* Category List ================================================== */}
+        <CategoryList />
+
+        {/* Reviews
+    ================================================== */}
+        <Reviews />
         {/* Youtube Side button
     ================================================== */}
-        <SideButton />
+        {/* <SideButton /> */}
       </div>
     </Template>
   );

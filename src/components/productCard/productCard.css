@@ -1,9 +1,9 @@
 .product-card {
-  width: 13.5rem;
+  width: 15rem;
   border-radius: 5px;
-  margin: 0 1.5rem;
+  /* margin: 0 1.5rem; */
   height: 27.5rem;
-  padding: 2rem 2rem 4rem;
+  padding: 2rem 0rem;
   border: none;
   outline: none;
   color: #777777;
@@ -12,7 +12,8 @@
   -webkit-font-smoothing: subpixel-antialiased;
   font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, sans-serif;
-
+    /* border: 1px solid black; */
+    overflow: hidden;
 }
 
 .product-image {
@@ -44,18 +45,56 @@
   letter-spacing: 0.05rem;
 }
 
-/* <div className="product-image"></div>
-      <div className="product-name">Avipro Avian Prebotic Supplement</div>
-      <div className="product-price">150 EGP</div> */
-
 @media (max-width: 1050px) {
   .product-card {
+    width: 13.5rem;
+  }
+}
+
+@media (max-width: 670px) {
+  .product-card {
+    width: 11rem;
+  }
+  .product-price {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 600px) {
+  .product-card {
+    width: 12rem;
+  }
+  .product-name {
+    -webkit-line-clamp: 3;
+    font-size:.9rem;
+  }
+}
+@media (max-width: 550px) {
+  .product-card {
     width: 15rem;
+  }
+}
+@media (max-width: 470px) {
+  .product-card {
+    width: 12.5rem;
+    }
+  .product-name {
+    -webkit-line-clamp: 3;
+    font-size:.8rem;
   }
 }
 
 @media (max-width: 400px) {
   .product-card {
-    width: 13.5rem;
+    width: 11rem;
+  }
+}
+@media (max-width: 350px) {
+  .product-card {
+    width: 10rem;
+  }
+}
+@media (max-width: 300px) {
+  .product-card {
+    width: 8.5rem;
   }
 }

@@ -2,7 +2,6 @@ import "./categoryItem.scss";
 import urlFor from "../../util/imageBuilder";
 
 export default function CategoryItem({ category }) {
-  console.log();
   return (
     <div className="category-item">
       <div

@@ -536,7 +536,7 @@ span.post-color {
 -------------------------------------------------- */
 
 .about-sec {
-  background: url(../images/33.jpg) no-repeat center center;
+  /* background: url(../images/33.jpg) no-repeat center center; */
   background-size: cover;
   color: #fff;
   position: relative;
@@ -1299,6 +1299,7 @@ a.sb {
   padding: 2em 1.5em;
   margin-top: 0 !important;
   font-size: 0.83em;
+  overflow: hidden;
 }
 /* The colour of the indicators */
 .blog .carousel-indicators li {
@@ -1315,7 +1316,7 @@ a.sb {
 /*-- //testimonials --*/
 /*-- Contact--*/
 .contact-sec {
-  background: url(../images/2.jpg) no-repeat center center;
+  /* background: url(../images/2.jpg) no-repeat center center; */
   background-size: cover;
   position: relative;
   color: #fff;
@@ -1529,7 +1530,7 @@ footer button.btn1:hover {
   height: 40px;
   border: none;
   text-indent: 100%;
-  background: #292929 url(../images/move_up.png) no-repeat 11px 11px;
+  /* background: #292929 url(../images/move_up.png) no-repeat 11px 11px; */
 }
 
 #toTopHover {

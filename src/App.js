@@ -1,6 +1,5 @@
 import "./App.css";
 import Landing from "./pages/landing/landing";
-import { useState } from "react";
 import { Route } from "react-router-dom";
 function App() {
   return (

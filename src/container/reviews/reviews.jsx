@@ -1,16 +1,16 @@
 import Slider from "react-slick";
-import "./testnimonials.css";
+import "./reviews.css";
 import { useState, useEffect } from "react";
 import sanityClient from "../../sanity/sanity";
 import urlFor from "../../util/imageBuilder";
 
-export default function Testimonials() {
+export default function Reviews() {
   const [slidesSettings, setSlidesSettings] = useState({
-    slidesToShow: 2,
-    slidesToScroll: 2,
+    slidesToShow: 3,
+    slidesToScroll: 3,
   });
   const [reviews, setReviews] = useState(null);
-  const query = '*[_type == "reviews"]{text,image}';
+  const query = '*[_type == "review"]{text,image}';
   useEffect(() => {
     sanityClient
       .fetch(query)
@@ -34,10 +34,24 @@ export default function Testimonials() {
           dots: <></>,
           nextArrow: <> </>,
           prevArrow: <> </>,
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+
+      {
+        breakpoint: 600,
+        settings: {
+          dots: <></>,
+          nextArrow: <> </>,
+          prevArrow: <> </>,
+          slidesToShow: 1,
+          slidesToScroll: 1,
         },
       },
     ],
   };
+
   window.onresize = function () {
     if (window.innerWidth < 400) {
       setSlidesSettings({
@@ -48,15 +62,15 @@ export default function Testimonials() {
   };
 
   return (
-    <section id="testimonials" className="banner-bottom-wthree py-lg-5 py-4">
-      <div className="container">
+    <section id="reviews" className="banner-bottom-wthree py-lg-5 py-4">
+      <div className="reviews-container">
         <div className="inner-sec py-md-5 py-3">
           <h3 className="tittle text-center mb-lg-5 mb-3 reviews-header">
-            آراء عملائي
+            Clients' Reviews
           </h3>
           <div className="row blog">
             <div className="col-lg-12">
-              <div className="testimonials-slider-container slider-container mt-3">
+              <div className="reviews-slider-container slider-container mt-3">
                 <Slider {...sliderSettings}>
                   {/* style=
                   {{
@@ -68,7 +82,7 @@ export default function Testimonials() {
                     ? reviews.map((review, index) => (
                         <div
                           key={index}
-                          className=" col-md-12 pd-3  reviews-box"
+                          className=" col-md-12 pd-3  reviews-box "
                         >
                           <p>
                             {" "}

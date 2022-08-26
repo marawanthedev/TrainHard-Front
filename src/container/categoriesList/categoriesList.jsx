@@ -20,5 +20,9 @@ export default function CategoryList() {
       return <CategoryItem category={category} />;
     });
   };
-  return <div className="category-list">{handleCategoriesRendering()}</div>;
+  return (
+    <div id="categories" className="category-list">
+      {handleCategoriesRendering()}
+    </div>
+  );
 }

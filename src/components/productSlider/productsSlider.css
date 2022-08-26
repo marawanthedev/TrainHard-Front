@@ -40,7 +40,7 @@
 }
 .products-slider-container .slick-dots li.slick-active button:before {
   font-size: 1.5rem;
-  color: #170205 !important;
+  color: rgba(0, 168, 224, 1) !important;
 }
 .products-slider-container .slick-dots li button:before {
   font-size: 1.5rem !important;
@@ -57,4 +57,19 @@
 .products-slider-container .slick-next {
   font-size: 4rem !important;
   right: 4rem !important;
+}
+
+
+@media (max-width: 800px) {
+  .products-slider-container{
+    width: 90%;
+  }
+}
+@media (max-width: 600px) {
+  .products-slider-container{
+    width: 99%;
+  }
+  .products-slider-container h1{
+    margin-left: .25rem;
+  }
 }

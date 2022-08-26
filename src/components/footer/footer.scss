@@ -1,0 +1,17 @@
+.footer-link:hover {
+  text-decoration: none !important;
+  color: black !important;
+}
+@media (max-width: 550px) {
+  .footer-link {
+    font-size: 0.75rem !important;
+    padding: 0.5rem !important;
+  }
+}
+
+@media (max-width: 330px) {
+  .footer-link {
+    font-size: 0.7rem !important;
+    padding: 0.25rem !important;
+  }
+}

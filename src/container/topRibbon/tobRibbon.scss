@@ -1,8 +1,28 @@
 .top-ribbon {
   width: 100%;
   height: auto;
-  background-color: red;
+  // background-color: red;
+  background-color: rgba(0, 168, 224, 1);
+  padding: 0.5rem 0.5rem;
   color: white;
   font-size: 1.2rem;
   text-align: center;
+}
+
+@media (max-width: 700px) {
+  .top-ribbon {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .top-ribbon {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .top-ribbon {
+    font-size: 0.75rem;
+  }
 }

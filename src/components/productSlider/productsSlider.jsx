@@ -3,7 +3,7 @@ import ProductCard from "../productCard/productCard";
 import "./productsSlider.css";
 
 const productSliderConfig = {
-  productPerSlide: 5,
+  productPerSlide: 4,
 };
 export default function ProductsSlider(props) {
   const { products, header } = props;
@@ -24,17 +24,10 @@ export default function ProductsSlider(props) {
         },
       },
       {
-        breakpoint: 900,
+        breakpoint: 550,
         settings: {
-          nextArrow: <> </>,
-          prevArrow: <> </>,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToShow: 2,
+          slidesToScroll: 2,
           nextArrow: <> </>,
           prevArrow: <> </>,
         },

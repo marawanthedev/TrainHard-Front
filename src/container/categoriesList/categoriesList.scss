@@ -8,4 +8,8 @@
   justify-content: flex-end;
   align-items: center;
   flex-wrap: wrap;
+
+  @media (max-width: 900px) {
+    justify-content: center;
+  }
 }
