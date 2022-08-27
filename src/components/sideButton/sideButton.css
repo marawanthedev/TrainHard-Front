@@ -1,6 +1,6 @@
 .side-button {
-  width: 5rem;
-  height: 6rem;
+  width: 3rem;
+  height: 5rem;
   background-color: white;
   position: fixed;
   z-index: 100;
@@ -17,46 +17,52 @@
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   transform: translateX(3rem);
-  transition: ease-in-out .3s;
+  transition: ease-in-out 0.3s;
   cursor: pointer;
 }
-.side-button:hover{
+.side-button:hover {
   transform: translateX(0rem);
 }
 .side-button-text {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   text-align: center;
   font-size: 0.75rem;
   font-weight: 600;
 }
-.side-button-links{
+.side-button-links {
   height: 5rem;
   width: 95%;
   padding: 0 2.5%;
   display: flex;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-.side-button-link{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 3rem;
-  height: 2rem;
+.side-button-link {
+  width: 1.5rem;
+  height: 1.5rem;
   cursor: pointer;
   font-size: 1rem;
   border-radius: 5px;
   text-decoration: none !important;
-  margin: .25rem 0rem;
-
+  margin: 0.25rem 0rem;
 }
-.side-button-link-facebook{
+.side-button-link span {
+  margin-left: 0.3rem;
+}
+.side-button-link-facebook {
   background-color: #3b5998;
 }
-.side-button-link-instagram{
+.side-button-link-instagram {
   background: #d6249f;
-  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
 }
 @media (max-width: 1220px) {
   .side-button {
