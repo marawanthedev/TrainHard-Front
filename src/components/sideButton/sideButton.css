@@ -19,9 +19,6 @@
   transition: ease-in-out 0.3s;
   cursor: pointer;
 }
-.side-button:hover {
-  transform: translateX(0rem);
-}
 
 .side-button-links {
   height: 5rem;
