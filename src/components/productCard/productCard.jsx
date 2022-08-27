@@ -17,9 +17,9 @@ export default function ProductCard(props) {
       </div>
       {product.communicationLink !== null ? (
         <Button
-          linkTo={product.communicationLink}
-          textContent="Contact"
-          iconName="whatsapp"
+          linkTo="https://www.facebook.com/messages/t/107120878120414/"
+          textContent="Buy Now"
+          iconName=""
         ></Button>
       ) : null}
     </div>

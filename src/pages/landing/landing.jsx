@@ -2,7 +2,7 @@ import Template from "../../components/template/template";
 import Header from "../../container/header/header";
 import MyProducts from "../../container/myProducts/myProducts";
 import LoadingOverlay from "../../components/loadingOverlay/loadingOverlay";
-// import SideButton from "../../components/sideButton/sideButton";
+import SideButton from "../../components/sideButton/sideButton";
 import sanityClient from "../../sanity/sanity";
 import CategoryList from "../../container/categoriesList/categoriesList";
 import Reviews from "../../container/reviews/reviews";
@@ -12,7 +12,7 @@ export default function Landing() {
   sanityClient
     .fetch(query)
     .then((data) => {})
-    .catch((e) => console.log(e));
+    .catch((e) => {});
 
   return (
     <Template>
@@ -40,7 +40,7 @@ export default function Landing() {
         <Reviews />
         {/* Youtube Side button
     ================================================== */}
-        {/* <SideButton /> */}
+        <SideButton />
       </div>
     </Template>
   );

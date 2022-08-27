@@ -1,7 +1,8 @@
-.reviews-container{
+.reviews-container {
   width: 95%;
   margin: 0 auto;
   background-color: white;
+  padding-bottom: 2rem;
 }
 .slider-container {
   width: 100% !important;
@@ -12,7 +13,6 @@
   display: flex;
 }
 
-
 .slider-container .slick-dots {
   position: absolute;
   bottom: -30px !important;
@@ -22,18 +22,37 @@
   list-style: none;
   text-align: center;
 }
-
+.review-img-container {
+  background: #f7f7f7;
+  padding: 2em 1.5em;
+  margin-top: 0 !important;
+  font-size: 0.83em;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
 .reviews-header {
   font-size: 2.5rem !important;
   font-family: "Mirza", cursive;
   font-family: "Almarai", sans-serif;
   font-family: "Cairo", sans-serif;
   margin-top: -1rem;
+  position: relative;
+  margin-bottom: 1rem;
 }
-
+.reviews-header::after {
+  content: "";
+  position: absolute;
+  width: 5rem;
+  height: 0.25rem;
+  bottom: -0.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: black;
+}
 .reviews-slider-container .slick-dots li.slick-active button:before {
   font-size: 25px;
-  color: #0297ff !important;
+  color: #880808 !important;
 }
 
 .slick-dots li button:before {
@@ -71,8 +90,29 @@
   background-repeat: no-repeat;
 }
 
-.review-item{
+.review-item {
   display: flex !important;
   justify-content: center !important;
   align-items: center;
+}
+
+@media (max-width: 900px) {
+  .reviews-header {
+    font-size: 2rem !important;
+    font-family: "Roboto", sans-serif;
+  }
+}
+
+@media (max-width: 600px) {
+  .reviews-header {
+    font-size: 1.75rem !important;
+    font-family: "Roboto", sans-serif;
+  }
+}
+
+@media (max-width: 400px) {
+  .reviews-header {
+    font-size: 1.7rem !important;
+    font-family: "Roboto", sans-serif;
+  }
 }

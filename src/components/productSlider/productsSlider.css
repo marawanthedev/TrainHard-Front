@@ -40,7 +40,8 @@
 }
 .products-slider-container .slick-dots li.slick-active button:before {
   font-size: 1.5rem;
-  color: rgba(0, 168, 224, 1) !important;
+  color:#880808 !important;
+  
 }
 .products-slider-container .slick-dots li button:before {
   font-size: 1.5rem !important;

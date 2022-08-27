@@ -2,6 +2,7 @@ import "../../assets/css/font-awesome.css";
 import "../../assets/css/style.css";
 import "../../assets/css/bootstrap.css";
 import "./footer.scss";
+
 export default function Footer() {
   return (
     <footer className="action-sec py-lg-5 py-3" style={{ direction: "ltr" }}>

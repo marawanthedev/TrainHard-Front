@@ -1,11 +1,7 @@
 import "./tobRibbon.scss";
 import sanityClient from "../../sanity/sanity";
 import { useState, useEffect } from "react";
-
-//sanityIo offer structure sample
-// offer: {
-//   description: "";
-// }
+import { Fade } from "react-awesome-reveal";
 
 const TopRibbon = () => {
   const [offerMessage, setOfferMessage] = useState(null);
@@ -17,13 +13,15 @@ const TopRibbon = () => {
         const offerMessage = data[0].description;
         setOfferMessage(offerMessage);
       })
-      .catch((e) => console.log(e));
+      .catch((e) => {});
   }, []);
 
   return offerMessage !== undefined && offerMessage !== null ? (
-    <div className="top-ribbon">
-      <div className="top-ribbon__content">{offerMessage}</div>
-    </div>
+    <Fade>
+      <div className="top-ribbon">
+        <div className="top-ribbon__content">{offerMessage}</div>
+      </div>
+    </Fade>
   ) : null;
 };
 

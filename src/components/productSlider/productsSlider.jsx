@@ -1,6 +1,7 @@
 import Slider from "react-slick";
 import ProductCard from "../productCard/productCard";
 import "./productsSlider.css";
+import { Slide, Fade } from "react-awesome-reveal";
 
 const productSliderConfig = {
   productPerSlide: 4,
@@ -37,11 +38,15 @@ export default function ProductsSlider(props) {
   return (
     <div className="products-main-container">
       <div className="products-slider-container">
-        <h1 className="products-slider-container-header">{header}</h1>
+        <Slide duration={400} direction="left">
+          <h1 className="products-slider-container-header">{header}</h1>
+        </Slide>
         <Slider {...sliderSettings}>
           {products != null
             ? products.map((product, index) => (
-                <ProductCard key={index} product={product}></ProductCard>
+                <Fade>
+                  <ProductCard key={index} product={product}></ProductCard>
+                </Fade>
               ))
             : null}
         </Slider>

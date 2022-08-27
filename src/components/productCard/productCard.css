@@ -40,7 +40,8 @@
   height: 3rem;
 }
 .product-price {
-  color: rgba(0, 168, 224, 1);
+  /* color: rgba(0, 168, 224, 1); */
+  color:#3b5998;
   font-size: 1.4rem;
   letter-spacing: 0.05rem;
 }

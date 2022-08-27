@@ -3,6 +3,7 @@ import "./reviews.css";
 import { useState, useEffect } from "react";
 import sanityClient from "../../sanity/sanity";
 import urlFor from "../../util/imageBuilder";
+import { Fade } from "react-awesome-reveal";
 
 export default function Reviews() {
   const [slidesSettings, setSlidesSettings] = useState({
@@ -17,7 +18,7 @@ export default function Reviews() {
       .then((data) => {
         setReviews(data);
       })
-      .catch((e) => console.log(e));
+      .catch((e) => {});
   }, []);
 
   useEffect(() => {}, [slidesSettings]);
@@ -31,7 +32,6 @@ export default function Reviews() {
       {
         breakpoint: 900,
         settings: {
-          dots: <></>,
           nextArrow: <> </>,
           prevArrow: <> </>,
           slidesToShow: 2,
@@ -42,7 +42,6 @@ export default function Reviews() {
       {
         breakpoint: 600,
         settings: {
-          dots: <></>,
           nextArrow: <> </>,
           prevArrow: <> </>,
           slidesToShow: 1,
@@ -72,32 +71,27 @@ export default function Reviews() {
             <div className="col-lg-12">
               <div className="reviews-slider-container slider-container mt-3">
                 <Slider {...sliderSettings}>
-                  {/* style=
-                  {{
-                    backgroundImage: `url(${urlFor(
-                      slide.image.asset._ref
-                    ).url()})`,
-                  }} */}
                   {reviews !== null
                     ? reviews.map((review, index) => (
-                        <div
-                          key={index}
-                          className=" col-md-12 pd-3  reviews-box "
-                        >
-                          <p>
-                            {" "}
-                            <div
-                              className="review-img col-md-12"
-                              style={{
-                                backgroundImage: review.image
-                                  ? `url(${urlFor(
-                                      review.image.asset._ref
-                                    ).url()})`
-                                  : null,
-                              }}
-                            ></div>
-                          </p>
-                        </div>
+                        <Fade>
+                          <div
+                            key={index}
+                            className=" col-md-12 pd-3  reviews-box "
+                          >
+                            <div className="review-img-container">
+                              <div
+                                className="review-img col-md-12"
+                                style={{
+                                  backgroundImage: review.image
+                                    ? `url(${urlFor(
+                                        review.image.asset._ref
+                                      ).url()})`
+                                    : null,
+                                }}
+                              ></div>
+                            </div>
+                          </div>
+                        </Fade>
                       ))
                     : null}
                 </Slider>

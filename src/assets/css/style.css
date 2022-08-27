@@ -1294,12 +1294,15 @@ a.sb {
   top: auto;
   bottom: -40px;
 }
+/* customized for centering */
 .reviews-box p {
   background: #f7f7f7;
   padding: 2em 1.5em;
   margin-top: 0 !important;
   font-size: 0.83em;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
 /* The colour of the indicators */
 .blog .carousel-indicators li {

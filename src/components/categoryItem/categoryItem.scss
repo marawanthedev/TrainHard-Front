@@ -7,6 +7,8 @@
   font-family: "Roboto", sans-serif;
   cursor: pointer;
   border-radius: 1rem;
+  visibility: hidden;
+  opacity: 0;
   &__img {
     width: 100%;
     height: 100%;
@@ -28,10 +30,92 @@
     text-transform: uppercase;
   }
 
+  &:nth-of-type(1) {
+    visibility: hidden;
+    animation: slideLeft 0.75s ease-in-out forwards;
+  }
+  &:nth-of-type(2) {
+    visibility: hidden;
+    animation: slideLeft 0.5s ease-in-out forwards;
+  }
+  &:nth-of-type(3) {
+    visibility: hidden;
+    animation: slideRight 0.75s ease-in-out forwards;
+  }
+  &:nth-of-type(4) {
+    animation: slideLeft 0.75s ease-in-out forwards;
+  }
+  &:nth-of-type(5) {
+    animation: slideUp 0.5s ease-in-out forwards;
+  }
+  &:nth-of-type(6) {
+    animation: slideRight 0.75s ease-in-out forwards;
+    animation-delay: 1s;
+  }
   @media (max-width: 900px) {
     width: 45%;
   }
   @media (max-width: 550px) {
     width: 95%;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(25%);
+  }
+  to {
+    opacity: 1;
+    transform: scale(100%);
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20rem);
+    visibility: hidden;
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+    visibility: visible;
+  }
+}
+@keyframes slideLeftCustom {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-20rem);
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+}
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(20rem);
+    visibility: hidden;
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+    visibility: visible;
+  }
+}
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20rem);
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0rem);
   }
 }

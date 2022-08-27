@@ -12,7 +12,7 @@ export default function MyProducts() {
       .then((data) => {
         setProducts(data);
       })
-      .catch((e) => console.log(e));
+      .catch((e) => {});
   }, []);
 
   return (
