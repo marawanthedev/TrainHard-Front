@@ -14,9 +14,10 @@ export default function ProductCard(props) {
 
   function getContactLink() {
     if (innerWidth > 1024) {
-      return "https://www.facebook.com/messages/t/107120878120414/";
+      //m.me/USERNAME
+      return "http://m.me/supplementshopp";
     } else {
-      return "https://www.facebook.com/supplementshopp";
+      return "http://m.me/supplementshopp";
     }
   }
   return (
