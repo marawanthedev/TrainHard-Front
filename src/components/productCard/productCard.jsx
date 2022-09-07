@@ -2,10 +2,23 @@ import "./productCard.css";
 import Button from "../button/button";
 import urlFor from "../../util/imageBuilder";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 export default function ProductCard(props) {
   const { product, margin, isBig } = props;
+  let innerWidth;
 
+  useEffect(() => {
+    innerWidth = window.innerWidth;
+  }, []);
+
+  function getContactLink() {
+    if (innerWidth > 1024) {
+      return "https://www.facebook.com/messages/t/107120878120414/";
+    } else {
+      return "https://www.facebook.com/supplementshopp";
+    }
+  }
   return (
     <div
       className={`product-card ${isBig ? "product-card__big" : null}`}
@@ -34,7 +47,7 @@ export default function ProductCard(props) {
       </div>
       {product.communicationLink !== null ? (
         <Button
-          linkTo="https://www.facebook.com/messages/t/107120878120414/"
+          linkTo={getContactLink()}
           textContent="Buy Now"
           iconName=""
         ></Button>
