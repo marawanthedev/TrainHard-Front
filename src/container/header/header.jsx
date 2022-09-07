@@ -29,7 +29,7 @@ export default function Header() {
       {
         breakpoint: 600,
         settings: {
-          dots: <></>,
+          dots: true,
         },
       },
       {

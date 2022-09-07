@@ -26,12 +26,6 @@ export default function Footer() {
                   <span className="fa fa-instagram mr-1" />
                   instagram
                 </a>
-                <a
-                  href="https://wa.me/+201006500419"
-                  className="twitter-footer footer-link"
-                >
-                  <span className="fa fa-whatsapp mr-1" /> Whatsapp
-                </a>
               </div>
             </div>
           </div>
@@ -41,10 +35,10 @@ export default function Footer() {
               <p className="mb-2">
                 <i className="fas fa-map-marker-alt" />
                 <a
-                  href="https://www.google.com.tr/maps/place/89+Mohammed+Farid+Abou+Hadid,+Al+Hadiqah+Ad+Dawleyah,+Nasr+City,+Cairo+Governorate+4441276,+Mesir/@30.0436066,31.3381244,17z/data=!3m1!4b1!4m5!3m4!1s0x14583e8946c2580b:0xd01f2937ce5c36c6!8m2!3d30.0436066!4d31.3381244"
+                  href="https://goo.gl/maps/Ma4BJygMTh33MEPx5"
                   style={{ cursor: "pointer" }}
                 >
-                  89 Mohammed Farid Abou Hadid
+                  93 Mohammed Farid Abou Hadid
                   <br />
                   Nasr City, Cairo.
                 </a>

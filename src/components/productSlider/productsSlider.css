@@ -4,10 +4,9 @@
   height: 32.5rem;
   border-radius: 10px;
   position: relative;
-
 }
 .products-main-container {
-  background-color: #FAF9F6;
+  background-color: #faf9f6;
   width: 100%;
   height: auto;
   display: flex;
@@ -19,11 +18,10 @@
 .products-slider-container h1 {
   text-align: center;
   position: absolute;
-  top:-4rem;
-  left:0;
+  top: -4rem;
+  left: 0;
   z-index: 100;
-  font-family: 'Roboto', sans-serif;
-
+  font-family: "Roboto", sans-serif;
 }
 .products-slider-container-header {
   font-family: "Cairo", sans-serif;
@@ -40,8 +38,7 @@
 }
 .products-slider-container .slick-dots li.slick-active button:before {
   font-size: 1.5rem;
-  color:#880808 !important;
-  
+  color: #c22222 !important;
 }
 .products-slider-container .slick-dots li button:before {
   font-size: 1.5rem !important;
@@ -60,17 +57,16 @@
   right: 4rem !important;
 }
 
-
 @media (max-width: 800px) {
-  .products-slider-container{
+  .products-slider-container {
     width: 90%;
   }
 }
 @media (max-width: 600px) {
-  .products-slider-container{
+  .products-slider-container {
     width: 99%;
   }
-  .products-slider-container h1{
-    margin-left: .25rem;
+  .products-slider-container h1 {
+    margin-left: 0.25rem;
   }
 }

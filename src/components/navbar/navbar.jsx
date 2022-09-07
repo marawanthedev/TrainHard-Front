@@ -1,4 +1,6 @@
 import { PureComponent } from "react";
+import { Link } from "react-router-dom";
+
 // import Zoom from "react-reveal/Zoom";
 import "./navbar.css";
 export default class Navbar extends PureComponent {
@@ -26,39 +28,39 @@ export default class Navbar extends PureComponent {
   render() {
     const links = [
       {
-        text: "من نحن؟",
-        to: "#about",
+        text: "Main",
+        to: "/#main",
       },
       {
-        text: "خدمات",
-        to: "#services",
+        text: "New Arrival",
+        to: "/#new-arrivals",
       },
       {
-        text: "معرض الصور",
-        to: "#gallery",
+        text: "Categories",
+        to: "/#categories",
       },
       {
-        text: "قالو عنا",
-        to: "#testimonials",
-      },
-      {
-        text: "تواصل معنا",
-        to: "#contact",
+        text: "Reviews",
+        to: "/#reviews",
       },
     ];
     return (
       <>
         <nav
-          className={`navbar ${
+          className={`my_navbar ${
             this.state.scrolled ? "navbar-scroll-mode" : null
           }`}
         >
-          <div className="logo" />
+          <Link to="/" className="logo-link">
+            <div className="logo" />
+          </Link>
+
           <ul className="list">
             {links.map((link, index) => {
               return (
                 <li className="item" key={index}>
-                  <a href={`${link.to}`}>{link.text} </a>
+                  {/* <Link to={link.to}>{link.text}</Link> */}
+                  <a href={link.to}>{link.text}</a>
                 </li>
               );
             })}

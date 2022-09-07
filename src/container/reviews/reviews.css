@@ -1,9 +1,15 @@
 .reviews-container {
   width: 95%;
   margin: 0 auto;
-  background-color: white;
+  /* background-color: #36184f; */
   padding-bottom: 2rem;
 }
+#reviews {
+  background-color: #695681;
+}
+/* $bg-01: #695681;
+$bg-02: #36184f;
+$bg-03: #32243e; */
 .slider-container {
   width: 100% !important;
 }
@@ -15,7 +21,7 @@
 
 .slider-container .slick-dots {
   position: absolute;
-  bottom: -30px !important;
+  bottom: -40px !important;
   display: block;
   width: 100%;
   margin: 0;
@@ -39,6 +45,7 @@
   margin-top: -1rem;
   position: relative;
   margin-bottom: 1rem;
+  color: white !important;
 }
 .reviews-header::after {
   content: "";
@@ -52,12 +59,16 @@
 }
 .reviews-slider-container .slick-dots li.slick-active button:before {
   font-size: 25px;
-  color: #880808 !important;
+
+  /* color: linear-gradient(90deg, #ffedc0 0%, #ff9d87 100%) !important; */
+  color: #e2826c !important;
+
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
 }
 
 .slick-dots li button:before {
   font-size: 25px !important;
-  color: rgb(206, 202, 202) !important;
+  color: rgb(201, 189, 189) !important;
   opacity: 1 !important;
   border-radius: 50%;
 }

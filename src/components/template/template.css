@@ -1,9 +1,16 @@
 .mobile-navbar-container {
   visibility: hidden;
 }
-
+.nav-bar-container {
+  height: 7rem;
+  position: relative;
+  z-index: 1000;
+}
 @media (max-width: 850px) {
   .mobile-navbar-container {
     visibility: visible;
+  }
+  .nav-bar-container {
+    height: 5rem;
   }
 }

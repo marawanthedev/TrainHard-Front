@@ -1,8 +1,8 @@
 import "./mobileNavBar.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 export default function MobileNavBar() {
   const [showNav, setShowNav] = useState(false);
-
+  const [scrolled, setScrolled] = useState(false);
   const links = [
     {
       text: "Main",
@@ -21,9 +21,24 @@ export default function MobileNavBar() {
       to: "#reviews",
     },
   ];
+  useEffect(() => {
+    window.addEventListener("scroll", handlePageScroll);
+    if (window.pageYOffset > 1) {
+      setScrolled(true);
+    }
+  }, []);
+
+  const handlePageScroll = () => {
+    if (window.scrollY > 1) {
+      setScrolled(true);
+    }
+    if (window.scrollY <= 1) {
+      setScrolled(false);
+    }
+  };
 
   return (
-    <div className={`navigation `}>
+    <div className={`navigation  `}>
       <input
         type="checkbox"
         id="navi-toggle"
@@ -32,7 +47,12 @@ export default function MobileNavBar() {
         onClick={() => setShowNav(!showNav)}
         checked={!showNav ? false : true}
       />
-      <label htmlFor="navi-toggle" className="navigation__button">
+      <label
+        htmlFor="navi-toggle"
+        className={`navigation__button ${
+          scrolled ? "navigation__button__scrolled" : null
+        }`}
+      >
         <span className="navigation__icon">&nbsp;</span>
       </label>
       <div className="navigation__background">&nbsp;</div>

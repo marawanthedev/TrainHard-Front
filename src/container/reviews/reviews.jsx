@@ -28,6 +28,8 @@ export default function Reviews() {
     speed: 750,
     slidesToShow: slidesSettings.slidesToShow,
     slidesToScroll: slidesSettings.slidesToScroll,
+    nextArrow: <> </>,
+    prevArrow: <> </>,
     responsive: [
       {
         breakpoint: 900,

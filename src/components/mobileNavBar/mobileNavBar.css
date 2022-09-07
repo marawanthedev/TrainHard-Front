@@ -10,14 +10,16 @@
   width: 7rem;
   border-radius: 50%;
   position: fixed;
-  top: 4rem;
-  right: 0rem;
+  top: 3rem;
+  right: -1rem;
   z-index: 15;
   text-align: center;
   z-index: 10000000;
   cursor: pointer;
 }
-
+.navigation__button__scrolled {
+  top: 0.25rem;
+}
 .navigation__background {
   height: 6rem;
   width: 6rem;
@@ -112,8 +114,8 @@
 .navigation__icon,
 .navigation__icon::before,
 .navigation__icon::after {
-  width: 2.25rem;
-  height: 3px;
+  width: 2rem;
+  height: 1.5px;
   background-color: black;
   display: inline-block;
   transform: rotate(180deg);
@@ -135,4 +137,3 @@
 .navigation__icon::after {
   top: -1.6rem;
 }
-
