@@ -99,7 +99,7 @@ export default function ProductDisplay() {
             </div>
             <Button
               textContent={"Buy Now"}
-              linkTo="https://www.facebook.com/messages/t/107120878120414/"
+              linkTo="http://m.me/supplementshopp"
             />
           </div>
         </div>
