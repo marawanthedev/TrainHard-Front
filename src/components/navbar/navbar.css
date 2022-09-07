@@ -144,7 +144,8 @@
   }
   .logo {
     width: 5rem;
-    height: 5rem;
+    height: 4.75rem;
+    margin-left: 1.75rem;
     background-size: contain;
   }
 }
