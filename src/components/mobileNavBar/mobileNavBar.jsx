@@ -6,19 +6,19 @@ export default function MobileNavBar() {
   const links = [
     {
       text: "Main",
-      to: "#main",
+      to: "/#main",
     },
     {
       text: "New Arrival",
-      to: "#new-arrivals",
+      to: "/#new-arrivals",
     },
     {
       text: "Categories",
-      to: "#categories",
+      to: "/#categories",
     },
     {
       text: "Reviews",
-      to: "#reviews",
+      to: "/#reviews",
     },
   ];
   useEffect(() => {
