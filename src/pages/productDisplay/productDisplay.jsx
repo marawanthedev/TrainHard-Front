@@ -4,18 +4,32 @@ import Slider from "react-slick";
 import urlFor from "../../util/imageBuilder";
 import Button from "../../components/button/button";
 import Template from "../../components/template/template";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Redirect } from "react-router-dom";
+import sanityClient from "../../sanity/sanity";
+import ProductsSlider from "../../components/productSlider/productsSlider";
 
 export default function ProductDisplay() {
+  const [products, setProducts] = useState([]);
+
   const location = useLocation();
   let product = null;
 
   useEffect(() => {
     if (product !== null) {
       localStorage.setItem("product", JSON.stringify(product));
+
+      const query = `*[_type == "product" && category=="${product.category}"]{name,description,price,category,isNew,isHot,front_image,back_image}`;
+
+      sanityClient
+        .fetch(query)
+        .then((data) => {
+          setProducts(data);
+        })
+        .catch((e) => {});
+      console.log(products);
     }
-  }, [product]);
+  }, [product, products]);
 
   if (location.data) {
     product = location.data.product;
@@ -39,6 +53,7 @@ export default function ProductDisplay() {
     }
     return imagesArray;
   }
+
   const sliderSettings = {
     dots: true,
     infinite: true,
@@ -68,6 +83,7 @@ export default function ProductDisplay() {
       },
     ],
   };
+
   return product ? (
     <Template>
       <div className="product-display-container">
@@ -91,12 +107,16 @@ export default function ProductDisplay() {
             <div className="product-display-container__right__header">
               {product.name}
             </div>
-            <div className="product-display-container__right__desc">
-              {product.description}
-            </div>
             <div className="product-display-container__right__price">
               Price: {product.price}
             </div>
+            <div className="product-display-container__right__category">
+              Category: {product.category.split("_").join(" ")}
+            </div>
+            <div className="product-display-container__right__desc">
+              {product.description}
+            </div>
+
             <Button
               textContent={"Buy Now"}
               linkTo="http://m.me/supplementshopp"
@@ -104,6 +124,15 @@ export default function ProductDisplay() {
           </div>
         </div>
       </div>
+
+      {products.length > 1 ? (
+        <div className="related-products-container">
+          <ProductsSlider
+            products={products}
+            header={"Related Products"}
+          ></ProductsSlider>
+        </div>
+      ) : null}
     </Template>
   ) : (
     <Template>

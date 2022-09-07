@@ -8,6 +8,7 @@ const productSliderConfig = {
 };
 export default function ProductsSlider(props) {
   const { products, header } = props;
+  
   const sliderSettings = {
     dots: true,
     infinite: true,

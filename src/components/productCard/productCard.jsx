@@ -33,6 +33,7 @@ export default function ProductCard(props) {
           },
         }}
         style={{ textDecoration: "none" }}
+        onClick={() => window.scrollTo(0, 0)}
       >
         <div
           className="product-image"
