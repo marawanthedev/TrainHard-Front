@@ -8,7 +8,7 @@ const productSliderConfig = {
 };
 export default function ProductsSlider(props) {
   const { products, header } = props;
-  
+
   const sliderSettings = {
     dots: true,
     infinite: true,
@@ -45,9 +45,7 @@ export default function ProductsSlider(props) {
         <Slider {...sliderSettings}>
           {products != null
             ? products.map((product, index) => (
-                <Fade>
-                  <ProductCard key={index} product={product}></ProductCard>
-                </Fade>
+                <ProductCard key={index} product={product}></ProductCard>
               ))
             : null}
         </Slider>
