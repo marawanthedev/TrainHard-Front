@@ -16,7 +16,6 @@ const Template = (props) => {
           <Navbar />
         </div>
 
-        {/* <Navbar /> */}
         <div className="mobile-navbar-container">
           <MobileNavBar></MobileNavBar>
         </div>

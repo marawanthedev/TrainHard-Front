@@ -1,5 +1,6 @@
 .mobile-navbar-container {
-  visibility: hidden;
+  /* visibility: hidden; */
+  display: none;
 }
 .nav-bar-container {
   height: 7rem;
@@ -8,7 +9,7 @@
 }
 @media (max-width: 850px) {
   .mobile-navbar-container {
-    visibility: visible;
+    display: block;
   }
   .nav-bar-container {
     height: 5rem;
