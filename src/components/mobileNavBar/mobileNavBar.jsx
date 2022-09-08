@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 export default function MobileNavBar() {
   const [showNav, setShowNav] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [toTop, setToTop] = useState(false);
   const links = [
     {
       text: "Main",
@@ -26,6 +27,9 @@ export default function MobileNavBar() {
     if (window.pageYOffset > 1) {
       setScrolled(true);
     }
+    if (!document.querySelector(".top-ribbon")) {
+      setToTop(true);
+    }
   }, []);
 
   const handlePageScroll = () => {
@@ -38,7 +42,7 @@ export default function MobileNavBar() {
   };
 
   return (
-    <div className={`navigation  `}>
+    <div className={`navigation `}>
       <input
         type="checkbox"
         id="navi-toggle"
@@ -51,7 +55,7 @@ export default function MobileNavBar() {
         htmlFor="navi-toggle"
         className={`navigation__button ${
           scrolled ? "navigation__button__scrolled" : null
-        }`}
+        } ${toTop ? "navigation__button__to-top" : null}`}
       >
         <span className="navigation__icon">&nbsp;</span>
       </label>

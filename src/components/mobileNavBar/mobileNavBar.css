@@ -17,6 +17,7 @@
   z-index: 10000000;
   cursor: pointer;
 }
+.navigation__button__to-top,
 .navigation__button__scrolled {
   top: 0.25rem;
 }
