@@ -53,17 +53,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="copyright mt-md-5 mt-4 text-center">
-        <p>
-          © 2022 Train Hard . All Rights Reserved | built by
-          <a
-            rel="noreferrer"
-            href="https://marwan-mostafa.com/"
-            target="_blank"
-            style={{ marginLeft: ".5rem" }}
-          >
-            Marwan Mostafa
-          </a>
-        </p>
+        <p>© 2022 Train Hard . All Rights Reserved</p>
       </div>
     </footer>
   );
