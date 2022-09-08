@@ -20,8 +20,15 @@ export default function CategoryList() {
   }, []);
 
   const handleScreenYPosition = () => {
-    if (window.scrollY >= 850) {
-      setDisplay(true);
+    if (window.innerWidth > 1024) {
+      if (window.scrollY >= 850) {
+        setDisplay(true);
+      }
+    }
+    if (window.innerWidth < 768) {
+      if (window.scrollY >= 550) {
+        setDisplay(true);
+      }
     }
   };
   const handleCategoriesRendering = () => {
