@@ -15,6 +15,8 @@ export default function ProductsSlider(props) {
     speed: 750,
     slidesToShow: productSliderConfig.productPerSlide,
     slidesToScroll: productSliderConfig.productPerSlide,
+    nextArrow: <> </>,
+    prevArrow: <> </>,
     responsive: [
       {
         breakpoint: 1400,
