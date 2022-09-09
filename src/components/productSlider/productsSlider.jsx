@@ -1,7 +1,7 @@
 import Slider from "react-slick";
 import ProductCard from "../productCard/productCard";
 import "./productsSlider.css";
-import { Slide, Fade } from "react-awesome-reveal";
+import { Slide } from "react-awesome-reveal";
 
 const productSliderConfig = {
   productPerSlide: 4,
