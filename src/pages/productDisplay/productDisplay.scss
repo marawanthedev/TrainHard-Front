@@ -118,6 +118,10 @@
       font-size: 1.6rem;
       color: #3b5998;
       margin-bottom: 1rem;
+      &__old {
+        color: grey;
+        text-decoration: line-through;
+      }
     }
   }
 

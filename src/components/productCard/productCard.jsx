@@ -20,6 +20,7 @@ export default function ProductCard(props) {
       return "http://m.me/supplementshopp";
     }
   }
+
   return (
     <div
       className={`product-card ${isBig ? "product-card__big" : null}`}
@@ -44,8 +45,21 @@ export default function ProductCard(props) {
       </Link>
       <div className="product-name">{product.name}</div>
       <div className="product-price">
-        {parseFloat(product.price)}
-        <span>EGP</span>
+        {product.price ? (
+          <>
+            {parseFloat(product.price)}
+            <span>EGP</span>
+          </>
+        ) : (
+          <div className="product-price-double">
+            <div className="product-price-old">
+              {product.old_price} <span>EGP</span>
+            </div>
+            <div className="product-price-new">
+              {product.new_price} <span>EGP</span>
+            </div>
+          </div>
+        )}
       </div>
       {product.communicationLink !== null ? (
         <Button

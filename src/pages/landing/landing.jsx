@@ -6,6 +6,7 @@ import SideButton from "../../components/sideButton/sideButton";
 import sanityClient from "../../sanity/sanity";
 import CategoryList from "../../container/categoriesList/categoriesList";
 import Reviews from "../../container/reviews/reviews";
+import OfferProducts from "../../container/offerProducts/offerProducts";
 
 export default function Landing() {
   const query = '*[_type == "gallery"]';
@@ -30,10 +31,14 @@ export default function Landing() {
 
         {/* Products slider
     ================================================== */}
-        <MyProducts />
+        <OfferProducts />
 
         {/* Category List ================================================== */}
         <CategoryList />
+
+        {/* Products slider
+    ================================================== */}
+        <MyProducts />
 
         {/* Reviews
     ================================================== */}

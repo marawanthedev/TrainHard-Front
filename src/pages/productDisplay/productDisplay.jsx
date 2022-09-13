@@ -108,7 +108,16 @@ export default function ProductDisplay() {
               {product.name}
             </div>
             <div className="product-display-container__right__price">
-              Price: {product.price}
+              {product.price ? (
+                <>Price: {product.price}</>
+              ) : (
+                <>
+                  <div className="product-display-container__right__price__old">
+                    Old Price: {product.old_price}
+                  </div>
+                  <div>New Price: {product.new_price}</div>
+                </>
+              )}
             </div>
             <div className="product-display-container__right__category">
               Category: {product.category.split("_").join(" ")}

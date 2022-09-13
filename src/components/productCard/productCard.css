@@ -2,7 +2,7 @@
   width: 15rem;
   border-radius: 5px;
   /* margin: 0 1.5rem; */
-  height: 27.5rem;
+  height: 30rem;
   padding: 2rem 0rem;
   border: none;
   outline: none;
@@ -33,6 +33,7 @@
   height: 60%;
   border-radius: 6px;
 }
+
 .product-name {
   margin-bottom: 1rem;
   display: -webkit-box;
@@ -51,6 +52,18 @@
   color: #3b5998;
   font-size: 1.4rem;
   letter-spacing: 0.05rem;
+  display: flex;
+  justify-content: center;
+}
+.product-price-double {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.product-price-old {
+  color: grey;
+  text-decoration: line-through;
 }
 
 @media (max-width: 1050px) {
