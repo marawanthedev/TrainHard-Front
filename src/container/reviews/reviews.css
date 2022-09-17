@@ -5,7 +5,9 @@
   padding-bottom: 2rem;
 }
 #reviews {
-  background-color: #695681;
+  /* background-color: #695681; */
+  background-color: rgb(211, 146, 25);
+  background-color: #c22222;
 }
 /* $bg-01: #695681;
 $bg-02: #36184f;
@@ -61,14 +63,16 @@ $bg-03: #32243e; */
   font-size: 25px;
 
   /* color: linear-gradient(90deg, #ffedc0 0%, #ff9d87 100%) !important; */
-  color: #e2826c !important;
+  color: #0a0a0a !important;
 
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
 }
 
 .slick-dots li button:before {
   font-size: 25px !important;
-  color: rgb(201, 189, 189) !important;
+  /* color: rgb(254, 253, 253) !important; */
+  color: rgb(216, 210, 210) !important;
+
   opacity: 1 !important;
   border-radius: 50%;
 }
